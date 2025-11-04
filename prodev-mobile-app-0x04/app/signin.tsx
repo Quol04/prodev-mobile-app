@@ -1,17 +1,18 @@
 import { Text, TextInput, View, TouchableOpacity, Image } from "react-native";
-import { styles } from "@/styles/_joinstyle";
+import { styles } from "@/styles/join";
 // import { styles } from "@/styles/_joinstyle";
 
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
 import { FACEBOOKLOGO, GOOGLELOGO, HEROLOGO } from "@/constants";
+import { router } from "expo-router";
 
 export default function Sign() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
         <View style={styles.navGroup}>
-          <Ionicons name="arrow-back" size={25} />
+          <Ionicons name="arrow-back" size={25} onPress={()=> router.back()}/>
           <Image source={HEROLOGO} />
         </View>
         <Text style={styles.largeText}>Sign in to your</Text>
@@ -36,7 +37,7 @@ export default function Sign() {
         </View>
 
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Sign in</Text>
+          <Text style={styles.buttonText}>Sign Up</Text>
         </TouchableOpacity>
 
         <View style={styles.dividerGroup}>
@@ -87,7 +88,7 @@ export default function Sign() {
 
         <View style={styles.subTextGroup}>
           <Text style={styles.subText}>Don't have an account?</Text>
-          <Text style={styles.subTextJoin}>Join now</Text>
+          <Text style={styles.subTextJoin} onPress={()=> router.push("/join")}>Join now</Text>
         </View>
       </SafeAreaView>
     </SafeAreaProvider>

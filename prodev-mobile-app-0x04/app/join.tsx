@@ -3,19 +3,21 @@ import { styles } from "@/styles/join";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
 import { FACEBOOKLOGO, GOOGLELOGO, HEROLOGO } from "@/constants";
+import { router } from "expo-router";
+
 
 export default function Join() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
         <View style={styles.navGroup}>
-          <Ionicons name="arrow-back" size={25} />
+          <Ionicons name="arrow-back" size={25} onPress={()=> router.back()} />
           <Image source={HEROLOGO} />
         </View>
-        <Text style={styles.largeText}>Sign in to your</Text>
+        <Text style={styles.largeText}>Log in to your</Text>
         <Text style={styles.largeText}>Account</Text>
         <Text style={styles.smallText}>
-          Enter your email and password to sign in.
+          Enter your email and password to log in.
         </Text>
 
         <View style={styles.formGroup}>
@@ -34,7 +36,7 @@ export default function Join() {
         </View>
 
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Sign in</Text>
+          <Text style={styles.buttonText}>Log in</Text>
         </TouchableOpacity>
 
         <View style={styles.dividerGroup}>
@@ -85,7 +87,7 @@ export default function Join() {
 
         <View style={styles.subTextGroup}>
           <Text style={styles.subText}>Don't have an account?</Text>
-          <Text style={styles.subTextJoin}>Join now</Text>
+          <Text style={styles.subTextJoin} onPress={()=> router.push("/signin")}>Sign up</Text>
         </View>
       </SafeAreaView>
     </SafeAreaProvider>
