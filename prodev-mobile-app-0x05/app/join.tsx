@@ -3,10 +3,12 @@ import { styles } from "@/styles/join";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
 import { FACEBOOKLOGO, GOOGLELOGO, HEROLOGO } from "@/constants";
-import { router } from "expo-router";
+// import { router } from "expo-router";
+import { useRouter } from "expo-router";
 
 
 export default function Join() {
+  const router = useRouter()
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
@@ -36,7 +38,7 @@ export default function Join() {
         </View>
 
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Log in</Text>
+          <Text style={styles.buttonText} onPress={()=> router.push("/(home)")} >Log in</Text>
         </TouchableOpacity>
 
         <View style={styles.dividerGroup}>
