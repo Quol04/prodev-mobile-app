@@ -10,10 +10,10 @@ const styles = StyleSheet.create({
   searchGroup: {
     backgroundColor: "#00A882", // primary theme color
     paddingHorizontal: 16,
-    paddingTop: 50,
-    paddingBottom: 20,
-    borderBottomLeftRadius: 24,
-    borderBottomRightRadius: 24,
+    paddingTop: 70,
+    paddingBottom: 15,
+    // borderBottomLeftRadius: 24,
+    // borderBottomRightRadius: 24,
   },
   searchFormGroup: {
     flexDirection: "row",
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     color: "#777",
   },
   searchButton: {
-    backgroundColor: "#00A882",
+    backgroundColor: "#FFA800",
     borderRadius: 30,
     padding: 10,
     justifyContent: "center",
@@ -52,34 +52,36 @@ const styles = StyleSheet.create({
   filterGroup: {
     flexDirection: "row",
     alignItems: "center",
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    gap: 20,
+    paddingHorizontal: 2,
+    paddingVertical: 10,
+    gap: 8,
   },
   filterContainer: {
     alignItems: "center",
     justifyContent: "center",
-    width: 60,
+    width: 85,
   },
 
   /** 🏠 Property Listing Section */
   listingContainer: {
     flex: 1,
     backgroundColor: "#fff",
-    paddingTop: 10,
+    paddingTop: 1,
+    paddingHorizontal: 18,
   },
 
   /** 📄 Pagination / Show More Button */
   paginationContainer: {
     alignItems: "center",
-    marginVertical: 20,
+    marginVertical: 40,
+  
   },
   showMoreButton: {
-    backgroundColor: "#00A882",
-    paddingHorizontal: 24,
-    paddingVertical: 10,
+    backgroundColor: "#161117",
+    paddingHorizontal: 34,
+    paddingVertical: 18,
     borderRadius: 30,
-    elevation: 2,
+    // elevation: 2,
   },
   showMoreButtonText: {
     color: "#fff",
@@ -91,52 +93,3 @@ const styles = StyleSheet.create({
 export {styles} ;
 
 
-
-
-// import { StyleSheet, Dimensions } from "react-native";
-
-// const styles = StyleSheet.create({
-//     container:{
-//         flex:1
-//     },
-//     searchGroup:{
-
-//     },
-//     searchFormGroup:{
-
-//     },
-//     searchControlGroup:{
-
-//     },
-//     searchFormText:{
-
-//     },
-//     searchControl:{
-
-//     },
-//     searchButton:{
-
-//     },
-//     filterGroup:{
-
-//     },
-//     filterContainer:{
-
-//     },
-//     listingContainer:{
-
-//     },
-//     paginationContainer:{
-
-//     },
-
-//     showMoreButton:{
-
-//     },
-//     showMoreButtonText:{
-
-//     }
-
-// });
-
-// export{styles}
