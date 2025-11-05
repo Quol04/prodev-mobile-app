@@ -1,0 +1,6 @@
+/* Input file for NativeWind / Tailwind.
+	NativeWind expects the Tailwind directives so the utilities are generated
+	at build time. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
